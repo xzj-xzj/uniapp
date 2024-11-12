@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="home-page" style="width: 787rpx; display: flex; box-sizing: border-box">
+  <!-- 导航栏 -->
+  <view class="navbar" style="height: 79rpx; display: flex; box-sizing: border-box; width: 743rpx">
+    <!-- 左侧城市选择 -->
+    <view class="city-selector" style="width: 143rpx; display: flex; box-sizing: border-box">
+      <image src="../../images/定位.png" mode="aspectFit" style="width: 79rpx; height: 74rpx; display: block; box-sizing: border-box"></image>
+      <text class="city-text" style="width: 75rpx; display: block; box-sizing: border-box">杭州</text>
+    </view>
+    <!-- 搜索框 -->
+    <view class="search-box">
+      <image src="../../images/搜索框.png" mode="aspectFit" style="width: 72rpx; height: 147rpx; display: block; box-sizing: border-box; position: relative; left: -31rpx; top: 0rpx"></image>
+      <input style="width: 224rpx; display: block; box-sizing: border-box; height: 50rpx; position: relative; left: -41rpx; top: 0rpx" placeholder="搜索用户" type="text" />
+    </view>
+    <!-- 通知铃铛 -->
+    <view class="notification-bell">
+      <image src="../../images/通知.png" mode="aspectFit" style="width: 79rpx; height: 74rpx; display: block; box-sizing: border-box"></image>
+    </view>
+  </view>
+
+
+  <!-- 标签栏 -->
+  <view class="tabs" style="width: 787rpx; display: flex; box-sizing: border-box">
+    <view class="tab-item" style="width: 239rpx; height: 318rpx; display: block; box-sizing: border-box">
+      <image src="../../images/发现.png" mode="aspectFit" style="width: 222rpx; height: 166rpx; display: inline-block; box-sizing: border-box; position: relative; left: -111rpx; top: 8rpx"></image>
+      <text style="margin-top: 10rpx; position: relative; left: -110rpx; top: 0rpx">发现</text> <!-- 添加 margin-top 以增加间距 -->
+    </view>
+    <view class="tab-item">
+      <image src="../../images/场馆.png" mode="aspectFit" style="height: 166rpx; display: inline-block; box-sizing: border-box; width: 189rpx; left: -35rpx; top: 10rpx; position: relative"></image>
+      <text style="margin-top: 10rpx; position: relative; left: -35rpx; top: 0rpx">场馆</text>
+    </view>
+    <view class="tab-item">
+      <image src="../../images/台球.png" mode="aspectFit" style="width: 179rpx; height: 141rpx; display: block; box-sizing: border-box; position: relative; left: 41rpx; top: 9rpx"></image>
+      <text style="margin-top: 10rpx; position: relative; left: 41rpx; top: 29rpx">秒发活动</text>
+    </view>
+  </view>
+</view>
+
+
+<view>
+<image class="bg-image" mode="scaleToFill" src="../../images/绿色背景.jpg" style="position: fixed; left: 0rpx; top: 10rpx"></image>
+</view>
+
+<view>
+<image class="bg-image" mode="scaleToFill" src="../../images/首页图2.jpg" style="width: 368rpx; display: block; box-sizing: border-box; left: 4rpx; top: 374rpx; height: 170rpx; position: fixed"></image>
+<view class="overlay-text" style="position: absolute;">
+    <text style="position: relative; left: 116rpx; top: 0rpx">赛事</text>
+  </view>
+</view>
+<view>
+<image class="bg-image" mode="scaleToFill" src="../../images/首页图3.jpg" style="width: 368rpx; display: block; box-sizing: border-box; left: 377rpx; top: 375rpx; height: 170rpx; position: fixed"></image>
+<view class="overlay-text" style="position: absolute;">
+    <text style="position: relative; left: 491rpx; top: 0rpx">活动</text>
+  </view>
+</view>
+
+
+<view>
+<image class="bg-image" mode="scaleToFill" src="../../images/首页图1.jpg" style="width: 689rpx; display: block; box-sizing: border-box; position: fixed; left: 31rpx; top: 564rpx; height: 293rpx"></image>
+
+</view>
