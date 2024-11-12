@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-  
+    "custom-tab-bar": "../../components/customTabBar/index"
+    
   },
   "navigationBarBackgroundColor": "#fff"
 }

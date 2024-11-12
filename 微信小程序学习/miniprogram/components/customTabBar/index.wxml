@@ -1,0 +1,12 @@
+<!-- components/customTabBar/index.wxml -->
+<view class="tab-bar">
+  <view class="tab-bar-item" wx:for="{{list}}" wx:key="index" data-path="{{item.pagePath}}" data-text="{{item.text}}" bindtap="switchTab">
+    <image class="tab-bar-icon" src="{{item.iconPath}}"></image>
+    <text class="tab-bar-text">{{item.text}}</text>
+  </view>
+  <!-- Special case for the "+" icon -->
+  <view class="tab-bar-item plus-icon" data-path="{{plusItem.pagePath}}" data-text="{{plusItem.text}}" bindtap="switchTab">
+    <image class="tab-bar-icon plus-icon-img" src="{{plusItem.iconPath}}"></image>
+    <text class="tab-bar-text">{{plusItem.text}}</text>
+  </view>
+</view>
