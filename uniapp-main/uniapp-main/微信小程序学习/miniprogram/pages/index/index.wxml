@@ -1,11 +1,10 @@
-<!--index.wxml-->
 <view class="home-page" style="width: 787rpx; display: flex; box-sizing: border-box">
   <!-- 导航栏 -->
   <view class="navbar" style="height: 79rpx; display: flex; box-sizing: border-box; width: 743rpx">
     <!-- 左侧城市选择 -->
-    <view class="city-selector" style="width: 143rpx; display: flex; box-sizing: border-box">
-      <image src="../../images/定位.png" mode="aspectFit" style="width: 79rpx; height: 74rpx; display: block; box-sizing: border-box"></image>
-      <text class="city-text" style="width: 75rpx; display: block; box-sizing: border-box">杭州</text>
+    <view class="city-selector" style="width: 200rpx; display: flex; box-sizing: border-box; align-items: center" bindtap="chooseLocation">
+      <image src="../../images/定位.png" mode="aspectFit" style="width: 79rpx; height: 74rpx; display: block; box-sizing: border-box; margin-right: 10rpx;"></image>
+      <text class="city-text" style="font-size: 24rpx; width: 110rpx; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-break: break-all; overflow: hidden;">{{cityText}}</text>
     </view>
     <!-- 搜索框 -->
     <view class="search-box">
@@ -17,7 +16,6 @@
       <image src="../../images/通知.png" mode="aspectFit" style="width: 79rpx; height: 74rpx; display: block; box-sizing: border-box"></image>
     </view>
   </view>
-
 
   <!-- 标签栏 -->
   <view class="tabs" style="width: 787rpx; display: flex; box-sizing: border-box">
@@ -36,26 +34,23 @@
   </view>
 </view>
 
-
 <view>
-<image class="bg-image" mode="scaleToFill" src="../../images/绿色背景.jpg" style="position: fixed; left: 0rpx; top: 10rpx"></image>
+  <image class="bg-image" mode="scaleToFill" src="../../images/绿色背景.jpg" style="position: fixed; left: 0rpx; top: 10rpx"></image>
 </view>
 
 <view>
-<image class="bg-image" mode="scaleToFill" src="../../images/首页图2.jpg" style="width: 368rpx; display: block; box-sizing: border-box; left: 4rpx; top: 374rpx; height: 170rpx; position: fixed"></image>
-<view class="overlay-text" style="position: absolute;">
+  <image class="bg-image" mode="scaleToFill" src="../../images/首页图2.jpg" style="width: 368rpx; display: block; box-sizing: border-box; left: 4rpx; top: 374rpx; height: 170rpx; position: fixed"></image>
+  <view class="overlay-text" style="position: absolute;">
     <text style="position: relative; left: 116rpx; top: 0rpx">赛事</text>
   </view>
 </view>
 <view>
-<image class="bg-image" mode="scaleToFill" src="../../images/首页图3.jpg" style="width: 368rpx; display: block; box-sizing: border-box; left: 377rpx; top: 375rpx; height: 170rpx; position: fixed"></image>
-<view class="overlay-text" style="position: absolute;">
+  <image class="bg-image" mode="scaleToFill" src="../../images/首页图3.jpg" style="width: 368rpx; display: block; box-sizing: border-box; left: 377rpx; top: 375rpx; height: 170rpx; position: fixed"></image>
+  <view class="overlay-text" style="position: absolute;">
     <text style="position: relative; left: 491rpx; top: 0rpx">活动</text>
   </view>
 </view>
 
-
 <view>
-<image class="bg-image" mode="scaleToFill" src="../../images/首页图1.jpg" style="width: 689rpx; display: block; box-sizing: border-box; position: fixed; left: 31rpx; top: 564rpx; height: 293rpx"></image>
-
+  <image class="bg-image" mode="scaleToFill" src="../../images/首页图1.jpg" style="width: 689rpx; display: block; box-sizing: border-box; position: fixed; left: 31rpx; top: 564rpx; height: 293rpx"></image>
 </view>

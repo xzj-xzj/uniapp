@@ -1,65 +1,47 @@
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    cityText: '未知' // 初始值为“未知”
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
+  onLoad: function(options) {
+    // 页面加载时执行的函数
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
+  chooseLocation: function() {
+    wx.chooseLocation({
+      success: (res) => {
+        const name = res.name; // 地址名称
+        const address = res.address; // 地址详情
+        const latitude = res.latitude; // 纬度
+        const longitude = res.longitude; // 经度
+        console.log('地址名称：' + name);
+        console.log('地址详情：' + address);
+        console.log('纬度：' + latitude);
+        console.log('经度：' + longitude);
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
+        // 截取地址名称，超过10个字符的部分用省略号代替
+        const truncatedName = name.length > 10 ? name.slice(0, 10) + '...' : name;
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
-  },
+        // 更新页面数据
+        this.setData({
+          cityText: truncatedName
+        });
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+        // 显示提示信息
+        wx.showToast({
+          title: `地址：${address}，纬度：${latitude}，经度：${longitude}`,
+          icon: 'none',
+          duration: 3000
+        });
+      },
+      fail: (err) => {
+        console.error('选择位置失败：', err);
+        wx.showToast({
+          title: '选择位置失败，请检查权限设置',
+          icon: 'none',
+          duration: 3000
+        });
+      }
+    });
   }
-})
+});

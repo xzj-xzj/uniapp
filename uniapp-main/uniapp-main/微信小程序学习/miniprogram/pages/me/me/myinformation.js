@@ -1,4 +1,4 @@
-// pages/me/me.js
+// pages/me/me/myinformation.js
 Page({
 
   /**
@@ -62,10 +62,5 @@ Page({
    */
   onShareAppMessage() {
 
-  },
-  navigateToMyInformation: function () {
-    wx.navigateTo({
-      url: '../myinformation/myinformation'
-    });
   }
 })
