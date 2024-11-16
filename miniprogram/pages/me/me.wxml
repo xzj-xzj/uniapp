@@ -1,0 +1,26 @@
+<!-- pages/me/me.wxml -->
+<view class="container">
+  <header>
+    <view class="profile-section">
+      <image class="profile-image" src="/images/profile.jpg" style="position: relative; left: -208rpx; top: 49rpx; width: 99rpx; height: 108rpx; display: block; box-sizing: border-box"></image>
+      <text class="username" style="position: relative; left: -168rpx; top: 15rpx">用户9527</text>
+    </view>
+    <view class="nav-section">
+      <view class="nav-item" wx:for="{{[1, 2, 3, 4, 5]}}" wx:key="index">
+        {{item}}
+      </view>
+    </view>
+  </header>
+  <main>
+    <view class="icon-section">
+      <navigator url="/pages/myinformation/myinformation" class="icon-container">
+        <image class="icon-image" src="../../images/个人信息.png"></image>
+        <text class="icon-text">个人资料</text>
+      </navigator>
+      <view class="icon-container">
+        <image class="icon-image" src="../../images/帮助中心.png"></image>
+        <text class="icon-text">帮助中心</text>
+      </view>
+    </view>
+  </main>
+</view>

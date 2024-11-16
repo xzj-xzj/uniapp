@@ -1,0 +1,27 @@
+<!-- pages/myinformation/myinformation.wxml -->
+<view class="container">
+  <view class="section">
+    <view class="label">头像</view>
+    <view class="value">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="label">姓名</view>
+    <input class="input" placeholder="请输入姓名" value="{{userInfo.name}}" bindinput="bindNameInput"/>
+  </view>
+
+  <view class="section">
+    <view class="label">性别</view>
+    <input class="input" placeholder="请输入性别" value="{{userInfo.gender}}" bindinput="bindGenderInput"/>
+  </view>
+
+  <view class="section">
+    <view class="label">电话</view>
+    <input class="input" placeholder="请输入电话" value="{{userInfo.phone}}" bindinput="bindPhoneInput"/>
+  </view>
+
+  <button class="get-user-info-button" bindtap="bindGetUserProfile" style="position: relative; left: 0rpx; top: -2rpx">获取用户信息</button>
+  <button class="save-button" bindtap="saveUserInfo">保存</button>
+</view>
